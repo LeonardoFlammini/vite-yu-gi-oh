@@ -16,11 +16,12 @@ export default {
 
 
 <style scoped lang="scss">
-
+@use "../scss/partials/vars.scss" as *;
 header{
   background-color: white;
   width: 100%;
   height: 90px;
+  padding: $padding-container;
   .logo{
     width: 150px;
   }

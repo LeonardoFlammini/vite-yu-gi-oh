@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container bar-container">
     <div class="bar ">
       <select class="form-select" name="type" id="type">
         <option value="0">Seleziona un tipo</option>
@@ -17,13 +17,17 @@ export default {
 
 
 <style scoped lang="scss">
-.bar{
-  // height: 50px;
+@use "../scss/partials/vars.scss" as *;
+.bar-container{
+  background-color: $container-bg-color;
+  .bar{
   width: 100%;
-  background-color: rgba($color: #000000, $alpha: .5);
-  padding: 20px;
+  
+  padding: $padding-container;
   #type{
     width: 200px;
   }
 }
+}
+  
 </style>
