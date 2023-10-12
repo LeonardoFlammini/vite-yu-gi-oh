@@ -16,7 +16,7 @@ export default {
 
 <template>
   <div class="container card-container">
-    <div class="row row-cols-4 row-gap-3 ">
+    <div class="row row-cols-4 row-gap-3 align-items-stretch">
       <Card
       v-for="card in store.cardList"
       :key="card.id"

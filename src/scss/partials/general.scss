@@ -7,6 +7,7 @@ body{
     lighten($primary-color, 70%),
     lighten($primary-color, 50%)
   );
+  user-select: none;
 }
 
 img{

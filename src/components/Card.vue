@@ -6,6 +6,14 @@ export default {
     name: String,
     archetype: String,
     image: String
+  },
+  computed: {
+    printArchetype(){
+      if(this.archetype !== undefined){
+        return this.archetype;
+      }
+      return "\"Not Archetyped\""
+    }
   }
 
 }
@@ -13,11 +21,11 @@ export default {
 
 <template>
   <div class="col">
-    <div class="card">
+    <div class="card" style="height: 100%">
       <img :src="image" class="card-img-top" :alt="name">
       <div class="card-body text-center">
         <h5 class="card-title name">{{name}}</h5>
-        <p class="card-text archetype">{{archetype}}</p>
+        <p class="card-text archetype">{{printArchetype}}</p>
       </div>
     </div>
   </div>
@@ -25,5 +33,7 @@ export default {
 
 
 <style scoped lang="scss">
-
+.archetype{
+  text-decoration: underline;
+}
 </style>
